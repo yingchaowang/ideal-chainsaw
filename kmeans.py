@@ -1,6 +1,7 @@
 
 from flask import Flask, make_response, request
 app = Flask(__name__)
+app.debug = True
 
 @app.route("/")
 def index():
