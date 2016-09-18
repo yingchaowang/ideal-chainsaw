@@ -14,7 +14,7 @@ visited_pages = 0
 
 def get_links(url):
     mylinks = Counter()
-    html = requests.get(url)
+    html = requests.get(url, verify=False)
     soup = BeautifulSoup(html.text)
     for a in soup.find_all('a'):
         href = a.get('href')
