@@ -15,5 +15,5 @@ for a in soup.find_all('a'):
             href = url + href
         links[href] += 1
 
-for v in links.most_common():
-    print v
+for tup in links.most_common():
+    print tup[1]," ", tup[0]
