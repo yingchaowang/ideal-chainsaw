@@ -25,7 +25,7 @@ def get_links(url):
     return mylinks
 
 while len(links_to_visit) > 0 and visited_pages <= max_pages:
-    next_link = links_to_visit.pop()
+    next_link = links_to_visit.pop(0)
     if next_link in links_visited or next_link is None:
         continue
 
