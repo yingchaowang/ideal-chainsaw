@@ -3,4 +3,4 @@ cont=simple_flask
 sudo docker build -t $img .
 sudo docker stop $cont || true
 sudo docker rm -fv $cont || true
-sudo docker run --name $cont -p 5050:5000 $img sh /flask_start.sh
+sudo docker run --name $cont -dp 5050:5000 $img sh /flask_start.sh
