@@ -1,0 +1,20 @@
+
+
+cat << EOF > flask_entrypoint.sh
+pip install flask karnickel flask-babel
+sed -i 's/flaskext/flask.ext/g' /app/domination/main.py /app/domination/tools.py 
+python /app/domination/main.py
+EOF
+
+cat << EOF > Dockerfile
+FROM python:2
+COPY . /app
+EOF
+
+
+img=domination
+cont=dom
+sudo docker build -t $img .
+sudo docker stop $cont
+sudo docker rm -fv $cont
+sudo docker run -p 5000:8080 --name $cont $img sh /app/flask_entrypoint.sh
