@@ -6,6 +6,10 @@ app = Flask(__name__)
 def simple():
     return "<h1>Flask Index Page</h1>"
 
+@app.route("/newview")
+def simple():
+    return "<h1>Your New View</h1>"
+
 @app.route("/add_routes")
 def new_route():
     return "<h1>added more routes</h1>"
