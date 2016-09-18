@@ -1,0 +1,175 @@
+{
+  "data": {
+    "droplets": [
+      {
+        "backup_ids": [], 
+        "created_at": "2016-09-18T03:02:41Z", 
+        "disk": 30, 
+        "features": [
+          "virtio"
+        ], 
+        "id": 26136972, 
+        "image": {
+          "created_at": "2016-08-30T17:14:00Z", 
+          "distribution": "Ubuntu", 
+          "id": 19382867, 
+          "min_disk_size": 20, 
+          "name": "14.04.5 x64", 
+          "public": true, 
+          "regions": [
+            "nyc1", 
+            "sfo1", 
+            "nyc2", 
+            "ams2", 
+            "sgp1", 
+            "lon1", 
+            "nyc3", 
+            "ams3", 
+            "fra1", 
+            "tor1", 
+            "sfo2", 
+            "blr1"
+          ], 
+          "size_gigabytes": 0.45, 
+          "slug": "ubuntu-14-04-x64", 
+          "type": "snapshot"
+        }, 
+        "ip_address": "138.68.20.214", 
+        "kernel": null, 
+        "locked": false, 
+        "memory": 1024, 
+        "name": "mydo", 
+        "networks": {
+          "v4": [
+            {
+              "gateway": "138.68.16.1", 
+              "ip_address": "138.68.20.214", 
+              "netmask": "255.255.240.0", 
+              "type": "public"
+            }
+          ], 
+          "v6": []
+        }, 
+        "next_backup_window": null, 
+        "region": {
+          "available": true, 
+          "features": [
+            "private_networking", 
+            "backups", 
+            "ipv6", 
+            "metadata", 
+            "storage"
+          ], 
+          "name": "San Francisco 2", 
+          "sizes": [
+            "512mb", 
+            "1gb", 
+            "2gb", 
+            "4gb", 
+            "8gb", 
+            "16gb", 
+            "m-16gb", 
+            "32gb", 
+            "m-32gb", 
+            "48gb", 
+            "m-64gb", 
+            "64gb", 
+            "m-128gb", 
+            "m-224gb"
+          ], 
+          "slug": "sfo2"
+        }, 
+        "size": {
+          "available": true, 
+          "disk": 30, 
+          "memory": 1024, 
+          "price_hourly": 0.01488, 
+          "price_monthly": 10.0, 
+          "regions": [
+            "ams1", 
+            "ams2", 
+            "ams3", 
+            "blr1", 
+            "fra1", 
+            "lon1", 
+            "nyc1", 
+            "nyc2", 
+            "nyc3", 
+            "sfo1", 
+            "sfo2", 
+            "sgp1", 
+            "tor1"
+          ], 
+          "slug": "1gb", 
+          "transfer": 2.0, 
+          "vcpus": 1
+        }, 
+        "size_slug": "1gb", 
+        "snapshot_ids": [], 
+        "status": "active", 
+        "tags": [], 
+        "vcpus": 1, 
+        "volume_ids": []
+      }
+    ]
+  }, 
+  "inventory": {
+    "26136972": [
+      "138.68.20.214"
+    ], 
+    "_meta": {
+      "hostvars": {}
+    }, 
+    "all": {
+      "hosts": [
+        "138.68.20.214"
+      ], 
+      "vars": {}
+    }, 
+    "distro_Ubuntu": {
+      "hosts": [
+        "138.68.20.214"
+      ], 
+      "vars": {}
+    }, 
+    "image_14.04.5_x64": {
+      "hosts": [
+        "138.68.20.214"
+      ], 
+      "vars": {}
+    }, 
+    "image_19382867": {
+      "hosts": [
+        "138.68.20.214"
+      ], 
+      "vars": {}
+    }, 
+    "image_ubuntu-14-04-x64": {
+      "hosts": [
+        "138.68.20.214"
+      ], 
+      "vars": {}
+    }, 
+    "mydo": [
+      "138.68.20.214"
+    ], 
+    "region_sfo2": {
+      "hosts": [
+        "138.68.20.214"
+      ], 
+      "vars": {}
+    }, 
+    "size_1gb": {
+      "hosts": [
+        "138.68.20.214"
+      ], 
+      "vars": {}
+    }, 
+    "status_active": {
+      "hosts": [
+        "138.68.20.214"
+      ], 
+      "vars": {}
+    }
+  }
+}
