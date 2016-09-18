@@ -41,4 +41,4 @@ def get_route():
     #ground_truth = request.args.get('ground_truth', False)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
