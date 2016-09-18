@@ -10,7 +10,7 @@ links = Counter()
 for a in soup.find_all('a'):
     href = a.get('href')
     if href != '#':
-        if not s.startswith('http'):
+        if not href.startswith('http'):
             href = url + href
         links[href] += 1
 
