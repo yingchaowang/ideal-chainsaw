@@ -38,6 +38,7 @@ while len(links_to_visit) > 0 and visited_pages <= max_pages:
     visited_pages += 1
     # don't ruin the internet
     time.sleep(0.2)
+    print "visited: ", next_link
 
 
 for tup in links.most_common():
