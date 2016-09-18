@@ -3,6 +3,7 @@ from collections import Counter
 from operator import itemgetter as iget
 import requests
 import os
+import time
 
 start_url = os.environ.get('URL', 'http://www.cs.ucla.edu')
 links = Counter()
@@ -36,7 +37,7 @@ while len(links_to_visit) > 0 and visited_pages <= max_pages:
             links_to_visit.append(link)
     visited_pages += 1
     # don't ruin the internet
-    sleep 0.2
+    time.sleep(0.2)
 
 
 for tup in links.most_common():
