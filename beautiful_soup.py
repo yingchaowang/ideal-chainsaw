@@ -2,8 +2,9 @@ from bs4 import BeautifulSoup
 from collections import Counter
 from operator import itemgetter as iget
 import requests
+import os
 
-url = 'http://www.cs.ucla.edu'
+url = os.environ.get('URL', 'http://www.cs.ucla.edu')
 html = requests.get(url)
 soup = BeautifulSoup(html.text)
 links = Counter()
