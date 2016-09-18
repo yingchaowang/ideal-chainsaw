@@ -1,0 +1,12 @@
+---
+- hosts: all
+  vars:
+    docker_images:
+     - jenkins
+     - haproxy
+     - nginx
+     - python:2
+  tasks:
+  - shell: 'curl -sSL https://get.docker.com/ | sh'
+  - command: docker pull {{item}}
+    with_items: "{{docker_images}}"
