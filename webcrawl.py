@@ -35,6 +35,8 @@ while len(links_to_visit) > 0 and visited_pages <= max_pages:
         if link not in links_visited and link not in links_to_visit:
             links_to_visit.append(link)
     visited_pages += 1
+    # don't ruin the internet
+    sleep 0.2
 
 
 for tup in links.most_common():
