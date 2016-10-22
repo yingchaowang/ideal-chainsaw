@@ -5,10 +5,12 @@
      - jenkins
      - errbot/err
      - python
-     - adelton/freeipa-server
+       #     cannot use with mattermost preview
+       #     - adelton/freeipa-server
      - mattermost/mattermost-preview
      - sentry
      - postgres
+     - gitlab/gitlab-ce
   tasks:
   - shell: 'curl -sSL https://get.docker.com/ | sh'
   - command: docker pull {{item}}
