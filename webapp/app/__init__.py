@@ -1,6 +1,10 @@
+import sqlalchemy
 
 from flask import Flask, make_response, request
 app = Flask(__name__)
+
+conn_string = 'postgres://flask:secret@db:5432/flask'
+conn = sqlalchemy.create_engine(conn_string, client_encoding='utf8')
 
 @app.route("/")
 def simple():
