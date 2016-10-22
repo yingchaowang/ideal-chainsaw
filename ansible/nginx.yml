@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+  - apt: name=git state=present
+  - git: repo=https://github.com/fdavis/ideal-chainsaw dest=/usr/share/nginx/html/chainsaw
+  - copy: src=my_index.html dest=/usr/share/nginx/html/index.html
+    register: new_file
+
+  - apt: name=nginx state=present
+  - service: name=nginx state=started
+  - service: name=nginx state=restarted
+    when: new_file | changed

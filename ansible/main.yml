@@ -1,4 +1,4 @@
 ---
 - include: password_fix.yml
 - include: docker_setup.yml
-- include: jenkins_setup.yml
+#- include: jenkins_setup.yml

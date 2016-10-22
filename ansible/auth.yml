@@ -1,0 +1,7 @@
+---
+- hosts: all
+  vars:
+        - mykey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzyNj1O6ADN7SlhfXU+y3wwsSV8KxZQoWWDyP68xeMt4pxjjty5m1ofe/IEYyqOiPzg8Hzg/cF+B8kygT+//dbNRp9yLtp/SCuP9mA5rUhG8vpFnTv/Fsgi7kCMFpYgMOR8CeFCcIyVFzkrofgkhINecGOa/zpuH3/P9DsdVQXL+4LYnoJN2NwaSFxd4PvqvtMinP9Hv3aG0i09CTzWbrqlm6DgNF/WCeoZ9qBPYuD9Nhz4ynk5WuPy/sDWgXjev/Ht5AW9a8rZtuv/75PD83/gLzxa/jIzqSQm30KSvJ0jLbp2qmis6Q4UZhUEMBjtXlxpZYyzFS+KdmtzCV/IZNJ hubot@server1'
+  tasks:
+        - authorized_key: user=root key="{{ mykey }}"
+
