@@ -1,3 +1,2 @@
-nginx -c nginx.conf
+nginx
 uwsgi --ini wsgi.ini
-sleep 100h
