@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - command: >
+          docker run -dp 8065:8065
+          --name mattermost-preview
+          mattermost/mattermost-preview
+
