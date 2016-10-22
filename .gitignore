@@ -3,3 +3,4 @@ ansible/ansible-digital_ocean.cache
 *.tfstate
 *.backup
 *.pyc
+.cache
