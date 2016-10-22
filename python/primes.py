@@ -1,6 +1,8 @@
 def is_prime(n):
     """return true if *n* is prime"""
-    for element in range(2, n / 2):
+    if n < 2:
+        return False
+    for element in range(2, n/2+1):
         if n % element == 0:
             return False
     return True
