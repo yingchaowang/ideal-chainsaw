@@ -3,9 +3,12 @@
   vars:
     docker_images:
      - jenkins
-     - haproxy
-     - nginx
-     - python:2
+     - errbot/err
+     - python
+     - adelton/freeipa-server
+     - mattermost/mattermost-preview
+     - sentry
+     - postgres
   tasks:
   - shell: 'curl -sSL https://get.docker.com/ | sh'
   - command: docker pull {{item}}
