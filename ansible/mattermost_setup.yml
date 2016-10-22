@@ -1,8 +1,9 @@
 ---
 - hosts: all
+  gather_facts: False
   tasks:
-  - command: >
-          docker run -dp 8065:8065
-          --name mattermost-preview
-          mattermost/mattermost-preview
-
+  - docker:
+      name: mattermost-preview
+      image: mattermost/mattermost-preview 
+      ports:
+        - "8065:8065"

@@ -13,5 +13,8 @@
      - gitlab/gitlab-ce
   tasks:
   - shell: 'curl -sSL https://get.docker.com/ | sh'
+  - apt: name=python-pip state=present
+  - pip: name=docker-py state=present
+  - pip: name=docker-compose state=present
   - command: docker pull {{item}}
     with_items: "{{docker_images}}"

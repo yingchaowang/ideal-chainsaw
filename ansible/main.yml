@@ -3,4 +3,5 @@
 - include: docker_setup.yml
 - include: jenkins_setup.yml
 - include: mattermost_setup.yml
+- include: gitlab_setup.yml
 

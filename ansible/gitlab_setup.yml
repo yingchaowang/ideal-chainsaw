@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: False
+  tasks:
+  - docker:
+      name: gitlab
+      image: gitlab/gitlab-ce
+      ports:
+        - "2222:22"
+        - "8080:80"
+        - "8443:443"
