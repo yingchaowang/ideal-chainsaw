@@ -1,0 +1,20 @@
+## DOES NOT WORK
+---
+- hosts: all
+  gather_facts: False
+  tasks:
+  - docker:
+      name: sentry-redis
+      image: redis
+  - docker:
+      name: sentry-postgres
+      image: postgres
+      env:
+        POSTGRES_PASSWORD: secret
+        POSTGRES_USER: sentry
+  - docker:
+      name: sentry-postgres
+      image: postgres
+      env:
+        POSTGRES_PASSWORD: secret
+        POSTGRES_USER: sentry

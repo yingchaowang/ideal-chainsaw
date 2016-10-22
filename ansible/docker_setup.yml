@@ -9,6 +9,7 @@
        #     - adelton/freeipa-server
      - mattermost/mattermost-preview
      - sentry
+     - redis
      - postgres
      - gitlab/gitlab-ce
   tasks:
