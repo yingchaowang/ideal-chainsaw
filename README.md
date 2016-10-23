@@ -20,3 +20,4 @@ mkdir ~/ipython
 docker run -d -p 127.0.0.1:8888:8888 -v $HOME/ipython:/home/jovyan/work -e NB_UID=$(id -u $USER) -e GRANT_SUDO=yes --user root  jupyter/datascience-notebook
 Add Comment
 ```
+`test
