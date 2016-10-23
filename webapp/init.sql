@@ -6,3 +6,4 @@ CREATE TABLE users (
 	admin		boolean NOT NULL
 );
 
+INSERT INTO users VALUES ('ywang@mibura.com', TRUE, TRUE);
