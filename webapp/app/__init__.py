@@ -14,7 +14,7 @@ def simple():
 def list_users():
     # show the user profile for that user
     html = '<h1>The Users</h1>'
-    res = conn.execute ('selecr * from users')
+    res = conn.execute ('select * from users')
     for r in res:
       html +='<br/>' + str(r)
     return html
