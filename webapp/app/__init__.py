@@ -23,9 +23,9 @@ def list_users():
 def add_users(username):
     html = '<h1>adding: %s</h1>' % username
     try:
-        conn.execute('INSERT INTO flask.users VALUES (%S, FALSE, FALSE)' % username)
+        conn.execute('INSERT INTO flask.users VALUES ("%S", FALSE, FALSE)' % username)
         res ='<h2>success</h2>'
-    except:
+    except Exception as e:
         res ='<h2>faliure: ' + e.message + '</h2>'
     return html + res
 
