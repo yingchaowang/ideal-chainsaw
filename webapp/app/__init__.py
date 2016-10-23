@@ -19,5 +19,15 @@ def list_users():
       html +='<br/>' + str(r)
     return html
 
+@app.route('/useradd/<username>')
+def add_users(username):
+    html = '<h1>adding: %s</h1>' % username
+    try:
+        conn.execute('INSERT INTO flask.users VALUES (%S, FALSE, FALSE)' % username)
+        res ='<h2>success</h2>'
+    except:
+        res ='<h2>faliure: ' + e.message + '</h2>'
+    return html + res
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
