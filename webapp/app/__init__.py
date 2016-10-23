@@ -23,10 +23,22 @@ def list_users():
 def add_users(username):
     html = '<h1>adding: %s</h1>' % username
     try:
-        conn.execute('INSERT INTO flask.users VALUES (\'%s\', FALSE, FALSE)' % username)
+        conn.execute('INSERT INTO users VALUES (\'%s\', FALSE, FALSE)' % username)
         res ='<h2>success</h2>'
     except Exception as e:
         res ='<h2>faliure: ' + e.message + '</h2>'
+    return html + res
+
+@app.route('/userdel/<username>')
+def del_user(username):
+    html = '<h1>deleting: %s</h1>' % username
+    try:
+        r=conn.execute('DELETE FROM users WHERE email = \'%s\'' % username)
+        if r.rowcount == 0:
+            raise ValueError('user %s was not deleted' % username)
+        res = '<h2>success</h2>'
+    except Exception as e:
+        res = '<h2>failure: ' + e.message + '</h2>'
     return html + res
 
 if __name__ == "__main__":
