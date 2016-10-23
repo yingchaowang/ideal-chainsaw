@@ -26,7 +26,7 @@ def add_users(username):
         conn.execute('INSERT INTO flask.users VALUES ("%S", FALSE, FALSE)' % username)
         res ='<h2>success</h2>'
     except Exception as e:
-        res ='<h2>faliure: ' + e.message + '</h2>'
+        res ='<h2>faliure: ' + e.message + ('INSERT INTO flask.users VALUES ("%S", FALSE, FALSE)' % username) + '</h2>'
     return html + res
 
 if __name__ == "__main__":
